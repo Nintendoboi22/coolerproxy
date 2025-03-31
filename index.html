@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cb7290d6de.js" crossorigin="anonymous"></script>
+    <title>I agree</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/Nintendoboi22/nintendoboi22.github.io/blob/main/favicon.jpg?raw=true">
+</head>
+<br>
+<br>
+<br>
+<h1 class="h1a">about:blank loader "proxy%0A" <br>this wont work on internet blacklisted sites or if about:blank is blocked</h1>
+<h1 class="h1d">(Add https:// if custom, click to copy)</h1>
+<br>
+<style>
+    .copy-notification {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        z-index: 10;
+        transform: translateY(-150%); 
+    }
+
+    .h1d {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .h1d .copy-notification {
+        left: 50%;
+        transform: translate(-50%, -150%);
+    }
+</style>
+
+<h4 class="h1d" onclick="copyText('https://lichgames.s3.amazonaws.com/index.html', this)" style="cursor: default;">
+    - https://lichgames.s3.amazonaws.com/index.html -
+    <span class="copy-notification">👍</span>
+</h4>
+<h4 class="h1d" onclick="copyText('https://unblocked-games.s3.amazonaws.com/index.html', this)" style="cursor: default;">
+    - https://unblocked-games.s3.amazonaws.com/index.html -
+    <span class="copy-notification">👍</span>
+</h4>
+<h4 class="h1d" onclick="copyText('https://nintendoboi2.github.io/gme', this)" style="cursor: default;">
+    - https://nintendoboi2.github.io/gme -
+    <span class="copy-notification">👍</span>
+</h4>
+<br>
+<h4 class="h1d" style="cursor: default;">Make sure for any game under, you right click copy link<br>then come back here and paste it</h4>
+<br>
+<h4 class="h1d" onclick="copyText('https://nintendoboi2.github.io', this)" style="cursor: default;">
+    - https://nintendoboi2.github.io -
+    <span class="copy-notification">👍</span>
+</h4>
+<h4 class="h1d" onclick="copyText('https://nintendoboi22.github.io/', this)" style="cursor: default;">
+    - https://nintendoboi22.github.io/ -
+    <span class="copy-notification">👍</span>
+</h4>
+<h4 class="h1d" onclick="copyText('https://nintendoboi222.github.io/', this)" style="cursor: default;">
+    - https://nintendoboi222.github.io/ -
+    <span class="copy-notification">👍</span>
+</h4>
+<h4 class="h1d" onclick="copyText('https://nintendoboi2222.github.io/', this)" style="cursor: default;">
+    - https://nintendoboi2222.github.io/ -
+    <span class="copy-notification">👍</span>
+</h4>
+<h4 class="h1d" onclick="copyText('https://nintendoboi22222.github.io/', this)" style="cursor: default;">
+    - https://nintendoboi22222.github.io/ -
+    <span class="copy-notification">👍</span>
+</h4>
+<style>
+    .h1d:hover {
+        cursor: crosshair;
+    }
+</style>
+<br>
+
+<script src="index.js"></script>
+  <script>
+    function validURL(str) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  return !!pattern.test(str);
+}
+    function go() {
+      var page = new ABC({
+        "type": "blank",
+        "url": validURL(document.querySelector('input').value) ? document.querySelector('input').value : window.location.origin
+      })
+      page.open()
+    }
+    function copyText(text, element) {
+        navigator.clipboard.writeText(text).then(() => {
+            const notification = element.querySelector('.copy-notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 2000); // Hide after 2 seconds
+        });
+    }
+  </script>
+
+<div class="inputContainer">
+  <input type="url" placeholder="https://nintendoboi2.github.io" onkeydown="if(event.key==='Enter') go()" size="25" class="inputText" autofocus>
+  <button onclick="go()" class="inputGo">Go</button>
+</div>
+
+
+<body>
+
+</body>
+</html>
